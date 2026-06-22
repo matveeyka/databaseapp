@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+
+{% block title %}Документация API{% endblock %}
+
+{% block content %}
+<div class="api-docs">
+    <h1>Документация MyPosts API</h1>
+    <p class="subtitle">Используйте эти методы для интеграции со сторонними сервисами или автоматизации.</p>
+
+    <hr>
+
+    <div class="api-endpoint">
+        <h2><span class="method get">GET</span> /api/list</h2>
+        <p>Получение списка всех опубликованных постов в формате JSON.</p>
+        
+        <h3>Пример ответа (JSON):</h3>
+        <pre><code>[
+  {
+    "header": "Название поста",
+    "desc": "Текст описания поста..."
+  }
+]</code></pre>
+    </div>
+
+    <hr>
+
+    <div class="api-endpoint">
+        <h2><span class="method post">POST</span> /api/post</h2>
+        <p>Создание новой публикации в базе данных.</p>
+
+        <h3>Параметры запроса (Form-Data):</h3>
+        <table class="api-table">
+            <thead>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Тип</th>
+                    <th>Обязательный</th>
+                    <th>Описание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>header</code></td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>Заголовок нового поста.</td>
+                </tr>
+                <tr>
+                    <td><code>desc</code></td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>Текст или описание поста.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Пример запроса через cURL:</h3>
+        <pre><code>curl -X POST -H "Content-Type: application/json" -d "{\"header\":\"API работает!\", \"desc\":\"Данный пост выложен через API через cURL\"}" http://127.0.0.1:8000/api/post/</code></pre>
+    </div>
+</div>
+{% endblock %}

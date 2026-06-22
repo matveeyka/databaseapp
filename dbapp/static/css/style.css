@@ -1,0 +1,282 @@
+/* Стили делались ИИ-ассистентом */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+
+.header {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header a {
+    text-decoration: none;
+    color: #666666;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+
+.header a:first-child {
+    color: #111111;
+    font-weight: 700;
+    margin-right: auto; 
+}
+
+.header a:hover {
+    color: #0070f3;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555555;
+}
+
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Отступ между постами */
+    margin-top: 20px;
+}
+
+
+.post {
+    background: #ffffff;
+    border: 1px solid #eef1f4;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.post h1 {
+    font-size: 1.5rem;
+    color: #111111;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+
+.post p {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Контейнер для формы (ограничим по ширине, чтобы не растягивалась на весь экран) */
+.postform {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступы между элементами формы */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eef1f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Стили для подписей (Label) */
+.postform label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: -5px; /* Сближает лабел и инпут */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Стили для полей ввода (Input) */
+.postform input[type="text"],
+.postform textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #111111;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Эффект при клике на поле ввода */
+.postform input[type="text"]:focus,
+.postform textarea:focus {
+    background-color: #ffffff;
+    border-color: #0070f3; /* Синий акцент */
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+/* Стили для кнопки отправки */
+.postform button,
+.postform input[type="submit"] {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #111111; /* Стильный черный цвет */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.postform button:hover,
+.postform input[type="submit"]:hover {
+    background-color: #2d3748;
+}
+
+/* Контейнер документации */
+.api-docs {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.api-docs .subtitle {
+    color: #666666;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.api-docs hr {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 30px 0;
+}
+
+/* Стилизация эндпоинтов */
+.api-endpoint {
+    margin-bottom: 20px;
+}
+
+.api-endpoint h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.api-endpoint h3 {
+    font-size: 1rem;
+    color: #4a5568;
+    margin: 20px 0 10px 0;
+}
+
+/* Теги методов GET/POST */
+.method {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.method.get {
+    background-color: #0070f3; /* Синий для GET */
+}
+
+.method.post {
+    background-color: #10b981; /* Зеленый для POST */
+}
+
+/* Блоки с кодом (Pre/Code) */
+pre {
+    background-color: #1a1a1a;
+    color: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+code {
+    font-family: monospace;
+    background-color: #f1f3f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #d63384;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* Таблица параметров */
+.api-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #eef1f4;
+}
+
+.api-table th, 
+.api-table td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.api-table th {
+    background-color: #f8f9fa;
+    color: #4a5568;
+    font-weight: 600;
+    border-bottom: 1px solid #eef1f4;
+}
+
+.api-table td {
+    border-bottom: 1px solid #f1f3f5;
+    color: #333333;
+}
+
+.api-table tr:last-child td {
+    border-bottom: none;
+}

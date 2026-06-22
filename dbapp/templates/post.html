@@ -1,0 +1,15 @@
+{% extends "index.html" %} {% block title %}Публикация{% endblock %}
+
+{% block content %}
+<div class="post">
+    <form action="/postdb/" method="post" class="postform">
+        {% csrf_token %} <label prejudices for="header">Заголовок:</label>
+        <input type="text" name="header" id="header" placeholder="Введите заголовок..." required />
+        
+        <label for="desc">Описание:</label>
+        <textarea name="desc" id="desc" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+        
+        <button type="submit">Опубликовать</button>
+    </form>
+</div>
+{% endblock %}
