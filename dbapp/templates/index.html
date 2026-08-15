@@ -9,9 +9,20 @@
 </head>
 <body>
     <div class="header">
-        <a href="/">MyPosts</a>
+        <a href="/" class="logo">MyPosts</a>
         <a href="/post">Опубликовать</a>
         <a href="/api-info">API</a>
+        <div class="header-auth">
+            {% if user.is_authenticated %}
+                <div class="profile-menu">
+                    <div class="profile-icon">👤 {{ user.username }}</div>
+                    <a href="/logout" class="logout-btn">Выход</a>
+                </div>
+            {% else %}
+                <a href="/login" class="auth-btn login-btn">Вход</a>
+                <a href="/register" class="auth-btn register-btn">Регистрация</a>
+            {% endif %}
+        </div>
     </div>
     {% block content %}
     {% endblock %}
