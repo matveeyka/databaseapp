@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-form">
+        <h1>Вход в аккаунт</h1>
+        
+        {% if error %}
+        <div class="error-message">{{ error }}</div>
+        {% endif %}
+        
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Введите имя пользователя" 
+                    required
+                />
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Введите пароль" 
+                    required
+                />
+            </div>
+            
+            <button type="submit" class="submit-btn">Войти</button>
+        </form>
+        
+        <p class="auth-link">
+            Нет аккаунта? <a href="/register">Зарегистрируйтесь</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

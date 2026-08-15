@@ -280,3 +280,195 @@ pre code {
 .api-table tr:last-child td {
     border-bottom: none;
 }
+
+/* ===== Стили для аутентификации ===== */
+
+/* Контейнер для кнопок аутентификации в хедере */
+.header-auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+/* Кнопки входа и регистрации */
+.auth-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.login-btn {
+    color: #0070f3;
+    border: 1px solid #0070f3;
+}
+
+.login-btn:hover {
+    background-color: #f0f7ff;
+    color: #0052cc;
+}
+
+.register-btn {
+    background-color: #0070f3;
+    color: #ffffff;
+}
+
+.register-btn:hover {
+    background-color: #0052cc;
+}
+
+/* Профиль пользователя в хедере */
+.profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.profile-icon {
+    padding: 8px 12px;
+    background-color: #f0f7ff;
+    border-radius: 6px;
+    color: #0070f3;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.profile-icon:hover {
+    background-color: #e0f0ff;
+}
+
+/* Кнопка выхода */
+.logout-btn {
+    padding: 8px 16px;
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #fecaca;
+    color: #b91c1c;
+}
+
+/* ===== Стили для форм аутентификации ===== */
+
+/* Контейнер формы аутентификации */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Сама форма */
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #eef1f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.auth-form h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+/* Группа формы */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #111111;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    background-color: #ffffff;
+    border-color: #0070f3;
+    box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+/* Кнопка отправки формы */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #111111;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2d3748;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Ссылка на другую страницу аутентификации */
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+.auth-link a {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.auth-link a:hover {
+    color: #0052cc;
+    text-decoration: underline;
+}

@@ -3,7 +3,8 @@
 {% block content %}
 <div class="post">
     <form action="/postdb/" method="post" class="postform">
-        {% csrf_token %} <label prejudices for="header">Заголовок:</label>
+        {% csrf_token %}
+        <label for="header">Заголовок:</label>
         <input type="text" name="header" id="header" placeholder="Введите заголовок..." required />
         
         <label for="desc">Описание:</label>
