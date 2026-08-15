@@ -26,7 +26,10 @@ def api_post(request):
             
             if not api_header:
                 return JsonResponse({"error": "Поле 'header' обязательно для заполнения"}, status=400)
-            
+
+            if not api_desc:
+                return JsonResponse({"error": "Поле 'desc' обязательно для заполнения"}, status=400)
+
             Post.objects.create(header=api_header, desc=api_desc)
             return JsonResponse({"status": "success"}, status=201)
             
