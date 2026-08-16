@@ -19,3 +19,4 @@ staticfiles/
 media/
 
 *.sqlite3
+db.sqlite3
