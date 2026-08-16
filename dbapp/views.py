@@ -16,7 +16,9 @@ def postdb(request):
     header = request.POST.get('header')
     desc = request.POST.get('desc')
 
-    Post.objects.create(header=header, desc=desc)
+    author = request.user
+
+    Post.objects.create(header=header, desc=desc, author=author)
 
     return redirect('/')
 
