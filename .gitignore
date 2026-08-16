@@ -2,6 +2,10 @@ databaseapp/__pycache__
 apiapp/__pycache__
 dbapp/__pycache__
 
+databaseapp/migrations/
+apiapp/migrations/
+dbapp/migrations/
+
 __pycache__/
 *.py[cod]
 
